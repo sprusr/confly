@@ -1,0 +1,18 @@
+//! SkyScanner Awesomeify Thingy
+//! Made lovingly for the developer community at HackUPC 2016
+//! Author - Nathaniel Baulch-Jones, Scott Street, 2016
+//! Version - 20/02/2016 12:06pm
+
+
+@import 'reset'; // Import our reset css file
+
+// Set Globals
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+// Begin Main CSS Rules
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
