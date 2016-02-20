@@ -25,7 +25,7 @@ app.get('/test', function(req, res) {
   var market = 'GB', currency = 'GBP', locale = 'en-GB', originPlace = 'BHX', destinationPlace = 'BCN', outboundPartialDate = '2016-02-22', inboundPartialDate = '2016-02-24';
   request.get('http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/' + market + '/' + currency + '/' + locale + '/' + originPlace + '/' + destinationPlace + '/' + outboundPartialDate + '/' + inboundPartialDate + '?apiKey=' + apiKey, function(err, response, body) {
     var jsonres = JSON.parse(body);
-    res.send('Price: ' + jsonres.Currencies[0].Symbol + jsonres.Quotes[0].MinPrice);
+    res.send('Price: ' + jsonres.Currencies[0].Symbol + jsonres.Quotes[0].MinPrice + '\n' + body);
   })
 });
 
@@ -50,6 +50,6 @@ app.get('/test/old', function(req, res) {
   });
 });
 
-app.use(express.static('static'));
+app.use(express.static(__dirname + '/static'));
 
 app.listen(8000);
