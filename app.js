@@ -38,6 +38,54 @@ var conferences = [
     cost: 971.12,
     importance: 700
   },
+  {
+    name: 'Black Hat Asia',
+    city: 'SIN',
+    startDate: '2016-03-29',
+    endDate: '2016-04-01',
+    cost: 936.42,
+    importance: 400
+  },
+  {
+    name: 'Microsoft Build',
+    city: 'SFO',
+    startDate: '2016-03-30',
+    endDate: '2016-04-01',
+    cost: 690.68,
+    importance: 600
+  },
+  {
+    name: 'TechCrunch Disrupt NY',
+    city: 'JFK',
+    startDate: '2016-05-09',
+    endDate: '2016-05-11',
+    cost: 1246.01,
+    importance: 700
+  },
+  {
+    name: 'Google I/O',
+    city: 'SFO',
+    startDate: '2016-05-18',
+    endDate: '2016-05-20',
+    cost: 208.25,
+    importance: 700
+  },
+  {
+    name: 'E3',
+    city: 'LAX',
+    startDate: '2016-06-14',
+    endDate: '2016-06-16',
+    cost: 551.85,
+    importance: 700
+  },
+  {
+    name: 'The Next Web',
+    city: 'AMS',
+    startDate: '2016-05-26',
+    endDate: '2016-05-27',
+    cost: 382.52,
+    importance: 700
+  },
 ];
 
 var app = express();
