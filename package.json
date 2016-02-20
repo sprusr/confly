@@ -1,5 +1,10 @@
 {
   "name": "confly",
   "version": "0.0.1",
-  "main": "app.js"
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "request": "^2.69.0"
+  }
 }
