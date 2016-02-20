@@ -30,7 +30,56 @@ app.set('view engine', 'jade');
 
 app.get('/', function(req, res) {
   res.render('index', {});
-})
+});
+
+app.get('/search', function(req, res) {
+  if(!(req.query.origin && req.query.budget)) {
+    res.send('Need to supply origin and budget query params.');
+  } else {
+    var cons = conferences;
+    var resCount = 0;
+    var totalCost = 0;
+    var chosenCons = [];
+    var budget = req.query.budget;
+
+    cons.sort(function(a, b) {
+      if(a.importance < b.importance) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    cons.forEach(function(con) {
+      var market = 'GB', currency = 'GBP', locale = 'en-GB', originPlace = req.query.origin, destinationPlace = con.city, outboundPartialDate = con.startDate, inboundPartialDate = con.endDate;
+      getFlightsPrice(originPlace, con.city, con.startDate, con.endDate, function(err, cost, response) {
+        if(!err) {
+          var conCost = con.cost + cost;
+          con.totalCost = conCost;
+          con.flights = response;
+        }
+
+        resCount++;
+
+        if(resCount == conferences.length) {
+          resCount = 0;
+          cons.forEach(function(con) {
+            if(totalCost + con.totalCost <= budget) {
+              totalCost += con.totalCost;
+              chosenCons.push(con);
+            }
+
+            resCount++;
+
+            if(resCount == conferences.length) {
+              res.send(chosenCons);
+            }
+          });
+        }
+      });
+    });
+  }
+});
 
 app.get('/test/cons', function(req, res) {
   var cons = conferences;
