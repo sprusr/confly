@@ -21,7 +21,23 @@ var conferences = [
     endDate: '2016-03-04',
     cost: 996.11,
     importance: 300
-  }
+  },
+  {
+    name: 'SXSW Interactive',
+    city: 'AUS',
+    startDate: '2016-03-11',
+    endDate: '2016-03-15',
+    cost: 898.93,
+    importance: 250
+  },
+  {
+    name: 'Game Developers Conference',
+    city: 'SFO',
+    startDate: '2016-03-14',
+    endDate: '2016-03-18',
+    cost: 971.12,
+    importance: 700
+  },
 ];
 
 var app = express();
@@ -118,7 +134,7 @@ app.get('/test/cons', function(req, res) {
 
           if(resCount == conferences.length) {
             //res.send(chosenCons);
-            res.render('test', {cons: chosenCons})
+            res.render('test', {cons: chosenCons, budget: budget})
           }
         });
       }
