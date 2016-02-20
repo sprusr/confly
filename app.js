@@ -117,7 +117,8 @@ app.get('/test/cons', function(req, res) {
           resCount++;
 
           if(resCount == conferences.length) {
-            res.send(chosenCons);
+            //res.send(chosenCons);
+            res.render('test', {cons: chosenCons})
           }
         });
       }
