@@ -50,4 +50,6 @@ app.get('/test/old', function(req, res) {
   });
 });
 
+app.use(express.static('static'));
+
 app.listen(8000);
