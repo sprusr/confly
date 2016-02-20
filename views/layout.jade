@@ -1,0 +1,30 @@
+doctype
+html
+  head
+    title #{title} Confly - Cheapest flights to developer conferences around the world
+    link(rel='stylesheet', href='main.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+
+
+  body
+    header
+      h1 Confly
+    .container
+      p(id="tagline")
+        | connecting developers to developer conferences around the world
+      .main-content
+        block content
+      //
+        .sidebar
+          block sidebar
+    footer
+      p Lovingly made using:
+        div(id="logos")
+          div
+            img(src="img/SkyscannerLogo.png")
+          div
+            img(src="img/HackUPCLogo.png")
+        p
+          |Also of note:
+        div(id="small")
+          |Sass, Node.js, Express, Jade, Atom, Photoshop CC, jQuery, Google Fonts & AWS
