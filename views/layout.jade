@@ -2,7 +2,9 @@ doctype
 html
   head
     title #{title} Confly - Cheapest flights to developer conferences around the world
+    // Bring in our stylesheet
     link(rel='stylesheet', href='main.css')
+    // Lock viewport for mobile devices
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
 
 
@@ -18,13 +20,19 @@ html
         .sidebar
           block sidebar
     footer
-      p Lovingly made using:
+      div Lovingly made using:
         div(id="logos")
           div
-            img(src="img/SkyscannerLogo.png")
+            img(src="img/SkyscannerLogo.png" alt="SkyScanner Logo")
           div
-            img(src="img/HackUPCLogo.png")
-        p
-          |Also of note:
+            img(src="img/HackUPCLogo.png" alt="HackUPC Logo")
+      p
+        |Also of note:
         div(id="small")
           |Sass, Node.js, Express, Jade, Atom, Photoshop CC, jQuery, Google Fonts & AWS
+  // jQuery
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js', type='text/javascript')
+  // jQuery easing plugin
+  script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', type='text/javascript')
+  //Form Plugin
+  script(src='/js/formplugin.js')

@@ -1,18 +1,4 @@
 extend layout
 block content
     div(id="mainbox")
-      form(name="get-quote", method="get")
-        div.input
-          span.label Title
-          input(type="text", name="title")
-        div.actions
-          input(type="submit", value="add")
-//block sidebar
-  .widget
-    h1 Widget
-    p
-      | Sed auctor neque eu tellus rhoncus ut
-      | eleifend nibh porttitor. Ut in nulla enim.
-    p
-      | Vivamus hendrerit arcu sed erat molestie
-      | vehicula.
+      include ../static/html/static_form.html
