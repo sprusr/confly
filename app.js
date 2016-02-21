@@ -1,18 +1,23 @@
-var express = require('express');
-var request = require('request');
+// @ Author: Scott Street & Nathaniel Baulch-Jones
+// @ Version: v0.1a
 
-var apiKey = require('./config.js').apiKey;
+var express = require('express'); // Require Express Module
+var request = require('request'); // Require Request Module
 
-var budget = 5200;
+var apiKey = require('./config.js').apiKey; // Require config.js API Key - see README for details
+
+var budget = 5200; // Set the user's cash budget, we can change this later.
+var userCurrency = 'GBP'; // Set the user's local currency - defaults to Pound Sterling
 
 var conferences = [
+  // Hard code conferences for now ^_^ #lazy
   {
-    name: 'Mobile World Congress',
-    city: 'BCN',
-    startDate: '2016-02-22',
-    endDate: '2016-02-25',
-    cost: 1039.32,
-    importance: 800
+    name: 'Mobile World Congress', // name: Name of the event
+    city: 'BCN', // city: The IATA airport code of the host airport (no support for multiple in v1.0)
+    startDate: '2016-02-22', // startDate: YYYY-MM-DD
+    endDate: '2016-02-25', // endDate: YYYY-MM-DD
+    cost: 1039.32, // cost: The base cost of a ticket in GBP (locales ignored for now!)
+    importance: 800 // importance: The subjective scale of importance of the event - which we will rank by.
   },
   {
     name: 'RSA Conference',

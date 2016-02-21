@@ -1,7 +1,10 @@
 extend layout
 block content
     div(id="mainbox")
-      h1 With a budget of £#{budget} you can go to:
-      each con in cons
-        h2=con.name
-        p='Total cost: £'+con.totalCost.toFixed(2)
+      div(id="goToSearch" class="results")
+        fieldset(class="results")
+          h2 With a budget of £#{budget} you can go to:
+          each con in cons
+
+            h3=con.name
+            p='Total cost: £'+con.totalCost.toFixed(2)

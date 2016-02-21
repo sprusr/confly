@@ -101,6 +101,10 @@ input, select {
   margin: -20px auto 0 auto;
   text-align: center;
   position: relative; }
+  #goToSearch .results {
+    width: 470px !important;
+    margin-left: -75px;
+    margin-top: 10px; }
 
 #goToSearch fieldset {
   background: rgba(255, 255, 255, 0.6);
@@ -114,6 +118,8 @@ input, select {
   margin-top: -10px;
   /*stacking fieldsets above each other*/
   position: absolute; }
+  #goToSearch fieldset .results {
+    width: 450px; }
 
 /*Hide all except first fieldset*/
 #goToSearch fieldset:not(:first-of-type) {

@@ -10,6 +10,11 @@
 	margin: -20px auto 0 auto;
 	text-align: center;
 	position: relative;
+	.results{
+		width: 470px!important;
+		margin-left: -75px;
+		margin-top: 10px;
+	}
 }
 #goToSearch fieldset {
 	background: rgba(255,255,255,0.6);
@@ -22,7 +27,9 @@
 	width: 100%;
 	margin: 0 auto;
 	margin-top: -10px;
-
+	.results{
+		width: 450px;
+	}
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
