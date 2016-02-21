@@ -15,13 +15,13 @@
 	<fieldset>
 		<h2 class="fs-title">My Location</h2>
 		<h3 class="fs-subtitle">Where are you travelling from?</h3>
-		<input type="text" name="portID" id="portID" placeholder="Enter an airport code, e.g. 'BHX'"" />
+		<input type="text" name="origin" id="portID" placeholder="Enter an airport code, e.g. 'BHX'" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
 		<h2 class="fs-title">My Budget</h2>
 		<h3 class="fs-subtitle">How much are you willing to spend?</h3>
-		<input id="mySlider" name="mySlider" type="range" min="100" step="25" value="150" max="6000" oninput="myOutput.value = mySlider.value"/>
+		<input id="mySlider" name="budget" type="range" min="100" step="25" value="150" max="6000" oninput="myOutput.value = mySlider.value"/>
 		£<output name="myOutput" id="myOutput">150</output>
 		<br />
 		<input type="button" name="next" class="next action-button" value="Next" />
