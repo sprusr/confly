@@ -6,6 +6,7 @@
 
 @import 'reset'; // Import our reset css file
 @import 'formplus'; //Insert interactive form file
+@import 'css3range'; //Import the range slider styles
 
 // Import the sexy font to our website
 @font-face{
@@ -88,7 +89,7 @@ header{
 
 #mainbox{
   width: 320px;
-  height: 420px;
+  min-height: 270px;
   margin: 0 auto;
   /*border-radius: 10px;
   border: 1px inset #000;
